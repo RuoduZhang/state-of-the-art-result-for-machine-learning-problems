@@ -1,0 +1,10 @@
+1、Windows安装Xming
+    Xming下载连接：https://xming.en.softonic.com/
+2、Linux需做如下设置：
+    需要能够使用ssh
+      vi /etc/ssh/sshd_config	开启XForwarding为yes
+    若通过secureCRT访问Linux，则设置会话选项-端口转发-远程/X11中勾选转发X11数据包
+3、安装eclipse
+    cd eclipse/  在eclipse.ini中加入一行如下：
+      -Dorg.eclipse.swt.internal.gtk.cairoGraphics=false		//这个相当于禁用了carioGraphics
+  到此完成eclipse的可视化设置。PyCharm等Linux下IDE软件可进行同样设置。
